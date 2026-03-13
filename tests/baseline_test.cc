@@ -6,7 +6,7 @@
 
 // Helper to run the executable and capture its output
 std::string RunOptimizationAndGetOutput(double alpha, int n) {
-  std::string command = "echo \"" + std::to_string(alpha) + " " + std::to_string(n) + "\" | ./integral_optimization";
+  std::string command = "./integral_optimization --alpha " + std::to_string(alpha) + " --steps " + std::to_string(n);
   
   char buffer[128];
   std::string result = "";

@@ -11,14 +11,17 @@ SystemState ApplyRungeKutta(const SystemState& starting_condition, double tau, i
   double t = 0.0;
 
   if (flag_print) {
-    out = std::fopen("./u.gnuplot", "w");
+    out = std::fopen("./trajectory.csv", "w");
+    if (out) {
+      std::fprintf(out, "t,p2\n");
+    }
   }
 
   answer = starting_condition;
 
   for (int index = 0; index < n; ++index) {
     if (flag_print && out) {
-      std::fprintf(out, "%lf %lf\n", t, answer.p2);
+      std::fprintf(out, "%lf,%lf\n", t, answer.p2);
     }
     k1 = system(answer, alpha) * tau;
     k2 = system(answer + k1 * 0.5, alpha) * tau;
@@ -29,7 +32,7 @@ SystemState ApplyRungeKutta(const SystemState& starting_condition, double tau, i
   }
 
   if (flag_print && out) {
-    std::fprintf(out, "%lf %lf\n", t, answer.p2);
+    std::fprintf(out, "%lf,%lf\n", t, answer.p2);
     std::fclose(out);
   }
 

@@ -2,4 +2,4 @@ build/
 *.o
 *.out
 u.gnuplot
-.cache/
+.cache/trajectory.csv
