@@ -13,7 +13,7 @@ endif()
 include_directories(include)
 
 # Executable (currently monolithic)
-add_executable(integral_optimization main.cpp)
+add_executable(integral_optimization main.cpp src/system_state.cc)
 
 # Google Test
 include(FetchContent)
@@ -30,5 +30,9 @@ enable_testing()
 add_executable(baseline_test tests/baseline_test.cc)
 target_link_libraries(baseline_test gtest_main)
 
+add_executable(system_state_test tests/system_state_test.cc src/system_state.cc)
+target_link_libraries(system_state_test gtest_main)
+
 include(GoogleTest)
 gtest_discover_tests(baseline_test)
+gtest_discover_tests(system_state_test)
