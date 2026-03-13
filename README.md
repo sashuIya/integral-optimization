@@ -5,7 +5,7 @@
 The goal is to find the numerical solution to the following optimal control problem:
 
 $$
-\int_0^{\frac{\pi}{2}} u^2 \, dt + x^2(0) \rightarrow \inf
+\int_0^{\frac{\pi}{2}} u^2 dt + x^2(0) \rightarrow \inf
 $$
 
 Subject to the constraints:
