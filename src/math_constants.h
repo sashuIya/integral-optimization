@@ -1,4 +1,3 @@
-// Copyright 2026 Alexander Lapin
 // Mathematical constants used for numerical optimization.
 
 #ifndef INTEGRAL_OPTIMIZATION_MATH_CONSTANTS_H_

@@ -1,4 +1,3 @@
-// Copyright 2026 Alexander Lapin
 // Implementation of the Shooting Method for Boundary Value Problems.
 
 #ifndef INTEGRAL_OPTIMIZATION_SHOOTING_METHOD_H_

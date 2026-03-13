@@ -1,4 +1,3 @@
-// Copyright 2026 Alexander Lapin
 // Methods for solving ODE systems and integrating functionals.
 
 #ifndef INTEGRAL_OPTIMIZATION_ODE_SOLVER_H_

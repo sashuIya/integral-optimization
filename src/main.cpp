@@ -1,4 +1,3 @@
-// Copyright 2026 Alexander Lapin
 // Main entry point for the Integral Optimization Solver.
 // This application solves a two-point boundary value problem using the
 // Shooting Method (Runge-Kutta 4 + Newton's method with Fedorenko

@@ -1,4 +1,3 @@
-// Copyright 2026 Alexander Lapin
 // Defines the state of the system for both state and adjoint variables.
 
 #ifndef INTEGRAL_OPTIMIZATION_SYSTEM_STATE_H_
