@@ -1,3 +1,9 @@
+// Copyright 2026 Alexander Lapin
+// Main entry point for the Integral Optimization Solver.
+// This application solves a two-point boundary value problem using the
+// Shooting Method (Runge-Kutta 4 + Newton's method with Fedorenko
+// normalization) to find the infimum of a given functional.
+
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
@@ -16,6 +22,8 @@ using integral_optimization::kPi;
 using integral_optimization::SolveBoundaryValueProblem;
 using integral_optimization::SystemState;
 
+// Defines the system of differential equations derived from the
+// Pontryagin Maximum Principle for this specific control problem.
 SystemState GetFunctionVector(const SystemState& current_vector, double alpha) {
   SystemState result_vector;
 
@@ -29,6 +37,7 @@ SystemState GetFunctionVector(const SystemState& current_vector, double alpha) {
   return result_vector;
 }
 
+// L2 Norm calculation for error vectors.
 double CalculateNorm(double x, double y) { return std::sqrt(x * x + y * y); }
 
 struct Config {
