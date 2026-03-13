@@ -13,7 +13,7 @@ endif()
 include_directories(include)
 
 # Executable (currently monolithic)
-add_executable(integral_optimization main.cpp src/system_state.cc)
+add_executable(integral_optimization main.cpp src/system_state.cc src/ode_solver.cc)
 
 # Google Test
 include(FetchContent)
@@ -33,6 +33,10 @@ target_link_libraries(baseline_test gtest_main)
 add_executable(system_state_test tests/system_state_test.cc src/system_state.cc)
 target_link_libraries(system_state_test gtest_main)
 
+add_executable(ode_solver_test tests/ode_solver_test.cc src/ode_solver.cc src/system_state.cc)
+target_link_libraries(ode_solver_test gtest_main)
+
 include(GoogleTest)
 gtest_discover_tests(baseline_test)
 gtest_discover_tests(system_state_test)
+gtest_discover_tests(ode_solver_test)
